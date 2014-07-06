@@ -1,0 +1,12 @@
+<h1>Activities</h1>
+
+<ul>
+
+  <% @professors.each do |professor| %>
+
+  <li>First Name: <%= professor.first_name %><br>
+    Last Name: <%= professor.last_name %><br>
+  </li>
+  <% end %>
+
+</ul>

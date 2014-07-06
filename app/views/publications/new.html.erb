@@ -1,0 +1,30 @@
+<h1>Add New Publication</h1>
+
+<%= form_for(@publication) do |p| %>
+
+  <div class="field">
+    <%= p.label :title %><br>
+    <%= p.text_field :title %>
+  </div>
+
+    <div class="field">
+    <%= p.label :volume %><br>
+    <%= p.text_field :volume %>
+  </div>
+
+    <div class="field">
+    <%= p.label :journal %><br>
+    <%= p.text_field :journal %>
+  </div>
+
+    <div class="field">
+    <%= p.label :date %><br>
+    <%= p.text_field :date %>
+  </div>
+
+  <div class="actions">
+    <%= p.submit %>
+  </div>
+
+
+<% end %>

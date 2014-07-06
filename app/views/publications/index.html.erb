@@ -1,0 +1,13 @@
+<h1>Add New Publications</h2>
+
+  <ul>
+
+  <% @publication.each do |publication| %>
+
+    <li>
+      <a href="/publications/<%= publication.id %>"><%= publication.title %>
+      </a>     
+    </li>
+  <% end %>
+
+</ul>

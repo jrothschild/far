@@ -1,0 +1,22 @@
+<h1>Faculty Information</h1>
+
+<p>
+  <%= @faculty_member.first_name %> <%= @faculty_member.middle_name %> <%= @faculty_member.last_name %>
+<p></p>
+  <%= @faculty_member.title %>
+<p></p>
+
+        <img src="http://mox.jmls.edu/images/<%=@faculty_member.datatel_id %>.jpg">
+
+<p>
+  <p>
+
+  <a data-confirm="Are you sure you want to delete the record for <%= @faculty_member.first_name %> <%= @faculty_member.last_name %>?" href="/faculty_members/<%= @faculty_member.id %>" data-method="delete" rel="nofollow" class="btn btn-danger show-page-btn" role="button">Delete</a>
+
+    <a href="/faculty_members/<%= @faculty_member.id %>/edit" class="btn btn-success show-page-btn" role="button">Edit</a>
+
+  </p>
+
+</p>
+</p>
+</p>

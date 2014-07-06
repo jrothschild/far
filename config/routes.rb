@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   devise_for :users
   root to: "faculty_members#index"
   get '/faculty_members' => 'faculty_members#index'
@@ -13,6 +15,12 @@ Rails.application.routes.draw do
   get '/publications/new' => 'publications#new'
   get '/publications/:id' => 'publications#show', as: :publication
   post '/publications' => 'publications#create'
+
+  get '/activities' => 'activities#index'
+  get '/activities/new' => 'activities#new'
+  get '/activities/:id' => 'activities#show', as: :activity
+  post '/activities' => 'activities#create'
+  get '/activities/:id/edit' => 'activities#edit'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

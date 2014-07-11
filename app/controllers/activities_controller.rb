@@ -1,7 +1,7 @@
 class ActivitiesController < ApplicationController
 
   def index
-      @activity = Activity.all
+    @activity = Activity.all
   end
 
   def show

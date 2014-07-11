@@ -8,7 +8,6 @@ class PublicationsController < ApplicationController
     @publication = Publication.find_by(:id => params[:id])
   end
 
-
   def new
     @publication = Publication.new
   end

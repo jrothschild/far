@@ -1,11 +1,18 @@
-<h1>Activities</h1>
+<h1>Institutional Activities</h1>
 
 <ul>
 
   <% @activity.each do |activity| %>
 
-  <li>Activity: <%= activity.service_type %><br>
-    <br>
+  <li>
+
+    Faculty Member: <%= activity.user.first_name %> <br>
+    Service Type: <%= activity.service_type %><br>
+    Activity Title: <%= activity.title %><br>
+    Presentation: <%= activity.presentation %><br>
+    Blog: <%= activity.blog %> <br>
+    Description: <%= activity.description %>
+    <p>
   </li>
   <% end %>
 

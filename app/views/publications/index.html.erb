@@ -1,12 +1,13 @@
-<h1>Add New Publications</h2>
+<h1>Institutional Publications</h2>
 
   <ul>
 
   <% @publication.each do |publication| %>
 
     <li>
-      <a href="/publications/<%= publication.id %>"><%= publication.title %>
-      </a>     
+      <a href="/publications/<%= publication.id %>"><%= publication.title %></a><br>
+      By: <%= publication.user.first_name %>
+           
     </li>
   <% end %>
 

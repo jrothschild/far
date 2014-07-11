@@ -2,14 +2,25 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-  root to: "faculty_members#index"
-  get '/faculty_members' => 'faculty_members#index'
-  get '/faculty_members/new' => 'faculty_members#new'
-  get '/faculty_members/:id' => 'faculty_members#show', as: :faculty_member
-  post '/faculty_members' => 'faculty_members#create'
-  get '/faculty_members/:id/edit' => 'faculty_members#edit'
-  patch '/faculty_members/:id' => 'faculty_members#update'
-  delete '/faculty_members/:id' => 'faculty_members#destroy'
+  
+  root to: "users#index"
+
+  # get '/faculty_members' => 'faculty_members#index'
+  # get '/users' => 'users#index'
+  # get '/faculty_members/new' => 'faculty_members#new'
+  # get '/faculty_members/:id' => 'faculty_members#show', as: :faculty_member
+  # post '/faculty_members' => 'faculty_members#create'
+  # get '/faculty_members/:id/edit' => 'faculty_members#edit'
+  # patch '/faculty_members/:id' => 'faculty_members#update'
+  # delete '/faculty_members/:id' => 'faculty_members#destroy'
+
+  get '/users' => 'users#index'
+  get '/users/new' => 'users#new'
+  get '/users/:id' => 'users#show', as: :user
+  post '/users' => 'users#create'
+  get '/users/:id/edit' => 'users#edit', as: :user_edit
+  patch '/users/:id' => 'users#update'
+  delete '/users/:id' => 'users#destroy'
 
   get '/publications' => 'publications#index'
   get '/publications/new' => 'publications#new'

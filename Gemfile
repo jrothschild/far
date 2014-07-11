@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 ruby "2.1.2"
 
+# rspec & capybara
+gem 'rspec-rails'
+gem 'capybara'
+
+
 # Heroku
 gem 'rails_12factor', group: :production #gem only used when app is in production mode
 gem 'pg', group: :production

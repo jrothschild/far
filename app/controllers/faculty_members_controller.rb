@@ -6,6 +6,8 @@ class FacultyMembersController < ApplicationController
 
   def show
     @faculty_member = FacultyMember.find_by(:id => params[:id])
+    # @activities = @user.activities
+    # @publicatins = @user.publications
   end
 
   def new

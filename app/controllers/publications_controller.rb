@@ -1,5 +1,9 @@
 class PublicationsController < ApplicationController
 
+   #Actions
+   before_action :authenticate_user!, :only => [:new] #-> routes to the login / signup if not authenticated
+
+
   def index
     @publication = Publication.all
   end

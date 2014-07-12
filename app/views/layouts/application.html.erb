@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FarApp</title>
+  <title>The John Marshall Law School | Faculty Activity Report</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,37 +12,54 @@
 <body>
 
 
-<!-- Bootstrap Navbar header -->
+  <!-- Bootstrap Navbar header -->
 
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <img src="/assets/logo-full-basic.png">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
-    </div>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+
+      <a href="/users/"><img src="/assets/logo-full-basic.png"></a>
+
+        
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+      </div>
+
+
 
 <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
+
+          <li>
+            <a href="/users/edit">
+              <% if current_user %> Welcome, <%= current_user.first_name %>! <% end %>
+            </a>
+          </li>
+
+
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options<b class="caret"></b></a>
             <ul class="dropdown-menu">
               <% if current_user.nil? %>
-                <li><a href="/users/sign_up">Sign Up</a></li>
+                <li>
+                  <a href="/users/sign_up">Sign Up</a>
+                </li>
                 <li><a href="/users/sign_in">Sign In</a></li>
               <% end %>
               
               <% if current_user %>
-                <li><a href="/users/edit">Edit Profile</a></li>
+                <li><a href="/activities/new"> Add New Activity</a></li>
+                <li><a href="/publications/new"> Add New Publication</a></li>
+                <li class="divider"></li>
+                <li><a href="/users/<%= current_user.id %>">My Profile</a></li>
+                <li><a href="/users/edit">Change Password</a></li>
                 <li class="divider"></li>
                 <li><a data-method="delete" rel="nofollow" href="/users/sign_out">Sign Out</a></li>
               <% end %>
@@ -53,20 +70,22 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-<div class="content">
+    <div class="content">
 
-<!-- Flash Message -->
+          <!-- Flash Message -->
 
-  <div class="container-fluid">
-    <% flash.each do |name, message| %>
-      <div class="alert alert-<%= name %>">
-        <%= message %>
-      </div>
-    <% end %>
+            <div class="container-fluid">
+              <% flash.each do |name, message| %>
+                <div class="alert alert-<%= name %>">
+                  <%= message %>
+                </div>
+              <% end %>
 
-<%= yield %>
+          <%= yield %>
 
-</div> <!-- div for content -->
+          </div> 
+    </div> <!-- /.content -->
+
 </body>
 </html>
 

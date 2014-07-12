@@ -18,7 +18,8 @@
 body {
   font-family: 'Helvetica Neue', Arial ,sans-serif;
   color: #444;
-  background: #f9f9fa;
+  // background: #f9f9fa;
+  background-image:url('/assets/bg-grid.png');
   // margin-top: 50px;
   margin-bottom: 60px;
 }
@@ -27,18 +28,19 @@ body {
 .navbar-default {
   margin: 2% auto;
   width: 92%;
-  max-width: 1280px;
+  max-width: 1100px;
   opacity: 1;
   -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   -o-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border: none;
+  background-image:url('/assets/bg-grid.png');
 }
 
 .content {
   margin: 2% auto;
   margin-bottom:0;
   width: 92%;
-  max-width: 1280px;
+  max-width: 1100px;
   padding: 2.5% 5%;
   opacity: .98;
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, .1);

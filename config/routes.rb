@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get '/activities/:id' => 'activities#show', as: :activity
   post '/activities' => 'activities#create'
   get '/activities/:id/edit' => 'activities#edit'
+  delete '/activities/:id' => 'activities#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

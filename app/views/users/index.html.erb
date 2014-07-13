@@ -2,16 +2,32 @@
 
 <ul>
 
-  <% @user.each do |professor| %>
+  <% @user.order("last_name").each do |professor| %>
 
-    <li>
-      
-      <a href="/users/<%= professor.id %>"><%= professor.full_name %></a>
-      
+    <div id="index_content" class="content">
+      <div class="index_name"> <!-- names on Index page -->
+        <li>          
+          <a href="/users/<%= professor.id %>"><%= professor.full_name %> </a>                 
+        </li>     
+      </div>    
 
-    
-    
-    </li>
+    <div class="index_image">
+        <li>  
+          <% if professor.datatel_id.nil? %> 
+            <a href="/users/<%= professor.id %>"><img src="/assets/placeholder.jpg" ></a>
+          <% else %>
+              <a href="/users/<%= professor.id %>"><img src="http://mox.jmls.edu/images/<%=professor.datatel_id %>.jpg" >
+              </a>
+            <div class="index_title">
+                <%= professor.title %>
+            </div>
+          <% end %>
+        </li>
+      </div>
+
+    </div>
   <% end %>
-
+  
 </ul>
+
+ 

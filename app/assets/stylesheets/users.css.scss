@@ -2,9 +2,52 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.fac_image { 
-  float: right;
-  position: top;
-  
+// Image ID for the index page
+.index_image img { 
+  margin-left: 40px;
+  padding-top: 40px;
+  float: left;
+  height: 175px;
+  width: 100px;
 
+}
+  
+  // Image class "show_image" for the show page
+.show_image {
+  float: right;
+}
+
+#index_content {
+  min-height: 250px;
+  // background: #A00;
+  background: #F0F0F0;
+  padding: 0px;
+  list-style-type: none;
+  border-radius: 7px;
+  box-shadow: 4px 4px 4px #DBDBDB;
+}
+
+.index_name {
+  background: #A00;
+  font-size: 30px;
+  color: white;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.index_title{
+  margin-left: 160px;
+  margin-right: 20px;
+  padding-top: 40px;
+}
+
+.index_name a:link, a:visited {
+  color: white;
+  text-decoration: none;
+  font-family: 'Trebuchet MS',verdana;
+  margin-left: 9px;
+  }
+
+#activities_show a{
+  color: #38678b;
 }

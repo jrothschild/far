@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   # patch '/faculty_members/:id' => 'faculty_members#update'
   # delete '/faculty_members/:id' => 'faculty_members#destroy'
 
+  get '/pages' => 'pages#index'
+
   get '/users' => 'users#index'
   get '/users/new' => 'users#new'
   get '/users/:id' => 'users#show', as: :user
@@ -26,12 +28,16 @@ Rails.application.routes.draw do
   get '/publications/new' => 'publications#new'
   get '/publications/:id' => 'publications#show', as: :publication
   post '/publications' => 'publications#create'
+  get '/publications/:id/edit' => 'publications#edit'
+  patch '/publications/:id' => 'publications#update'
+  delete '/publications/:id' => 'publications#destroy'
 
   get '/activities' => 'activities#index'
   get '/activities/new' => 'activities#new'
   get '/activities/:id' => 'activities#show', as: :activity
   post '/activities' => 'activities#create'
   get '/activities/:id/edit' => 'activities#edit'
+  patch '/activities/:id' => 'activities#update'
   delete '/activities/:id' => 'activities#destroy'
 
 

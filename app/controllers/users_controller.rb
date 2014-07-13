@@ -2,12 +2,14 @@ class UsersController < ApplicationController
 
   def index
     @user = User.all
+    # @user_id = User.find_by(:id => params[:id])
   end
 
   def show
     @user = User.find_by(:id => params[:id])
     # @activities = @user.activities
     @activities = @user.activities.group_by {|activity| activity.service_type}
+    @publications = @user.publications
     puts "QQQQQQQ"
     puts @activities
 

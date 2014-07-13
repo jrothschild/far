@@ -49,3 +49,13 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
   background-color: #fff;
 }
+
+h1 {
+  display: block;
+  font-size: 2em;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}

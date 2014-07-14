@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 ruby "2.1.2"
 
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'
+
+
 # rspec & capybara
 gem 'rspec-rails'
 gem 'capybara'

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   
+
+
   root to: "users#index"
 
   # get '/faculty_members' => 'faculty_members#index'
@@ -18,6 +20,7 @@ Rails.application.routes.draw do
 
   get '/users' => 'users#index'
   get '/users/new' => 'users#new'
+  get '/users/all' => 'users#all'
   get '/users/:id' => 'users#show', as: :user
   post '/users' => 'users#create'
   get '/users/:id/edit' => 'users#edit', as: :user_edit

@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'pdfkit'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -20,6 +21,6 @@ module FarApp
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.action_controller.permit_all_parameters = true
-    config.middleware.use PDFKit::Middleware, :print_media_type => true
+    config.middleware.use "PDFKit::Middleware", :print_media_type => true
   end
 end

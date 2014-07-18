@@ -17,5 +17,16 @@ class User < ActiveRecord::Base
 
   end
 
+  def activity
+
+    
+      
+        activities.each do |activity| 
+
+         activity.title 
+     end
+
+  end
+
 
 end

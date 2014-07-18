@@ -59,3 +59,30 @@ h1 {
   -webkit-margin-end: 0px;
   font-weight: bold;
 }
+
+@media print {
+  body {
+    // background-color: #FFF;
+    background-color: red;
+  }
+
+  #container {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  #line_items {
+    page-break-before: always;
+  }
+  
+  #pdf_link {
+    display: none;
+  }
+
+   .pdf_exclude {
+        display: none;
+  }
+}
+

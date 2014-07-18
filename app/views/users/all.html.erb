@@ -1,0 +1,12 @@
+<h1>Faculty Activity Report</h1>
+
+<ul>
+
+  <% @user.order("last_name").each do |professor| %>
+   <li>
+   <%= professor.full_name %> 
+   <%= professor.id %> 
+   
+ </li>
+   <% end %>
+</ul>

@@ -1,8 +1,14 @@
 class UsersController < ApplicationController
 
   def index
-    @user = User.all
-    # @user_id = User.find_by(:id => params[:id])
+    @users = User.order("last_name")
+    respond_with(@users)
+  end
+
+  def all
+   @user = User.all
+    
+    
   end
 
   def show
@@ -10,8 +16,7 @@ class UsersController < ApplicationController
     # @activities = @user.activities
     @activities = @user.activities.group_by {|activity| activity.service_type}
     @publications = @user.publications
-    puts "QQQQQQQ"
-    puts @activities
+    respond_with(@user)
 
   end
 
@@ -43,6 +48,9 @@ class UsersController < ApplicationController
     redirect_to "/users"
   end
     
+  def user_params
+    return params.require(:user).permit(:prefix, :first_name, :middle_name, :last_name, :email, :phone)
+  end
   
 
 end

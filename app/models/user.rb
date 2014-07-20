@@ -7,6 +7,12 @@ class User < ActiveRecord::Base
   has_many :activities
   has_many :publications
 
+  after_create { |admin| admin.send_reset_password_instructions }
+
+    def password_required?
+      new_record? ? false : super
+    end
+
   def full_name
  
     if self.middle_name.nil?

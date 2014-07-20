@@ -1,4 +1,9 @@
+
+
 <h1>All Faculty</h1>
+<style>
+  <%= Sass.compile(File.read(File.join(Rails.root, 'app', 'assets', 'stylesheets', "_styles.css"))) %>
+</style>
 
 <ul>
 
@@ -46,8 +51,8 @@
     <% end %>
 </div> <!-- /index_activities -->
     </div>
-  <% end %>
 
+  <% end %>
 </ul>
 
  

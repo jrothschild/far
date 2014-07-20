@@ -13,10 +13,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(:id => params[:id])
-    # @activities = @user.activities
+
     @activities = @user.activities.group_by {|activity| activity.service_type}
     @publications = @user.publications
-    respond_with(@user)
+    # respond_with(@user)
 
   end
 
@@ -47,10 +47,11 @@ class UsersController < ApplicationController
     flash[:success] = "The Faculty Profile has been Deleted"
     redirect_to "/users"
   end
-    
+ 
   def user_params
     return params.require(:user).permit(:prefix, :first_name, :middle_name, :last_name, :email, :phone)
   end
-  
+
+ 
 
 end

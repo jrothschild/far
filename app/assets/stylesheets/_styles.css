@@ -1,0 +1,44 @@
+@media print {
+  
+  body {
+    background-color: #FFF;
+  }
+
+  .dropdown  {
+    display: none;
+  }
+
+    .navbar  {
+    display: none;
+  }
+  
+  #line_items {
+    page-break-before: always;
+  }
+  
+  #pdf_link {
+    display: none;
+  }
+
+  .show_image {
+  float: right;
+  }
+
+  .index_image { 
+  display: none;
+    
+    }
+
+  .index_activities {
+    page-break-after: always;
+
+  }
+
+  .index_name a:link { 
+    pointer-events: none;
+    cursor: default !important;
+    text-decoration:none;  
+    color: black;  
+      }
+
+}

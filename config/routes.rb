@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get '/pages' => 'pages#index'
 
+
   get '/users' => 'users#index'
   get '/users/new' => 'users#new'
   get '/users/all' => 'users#all'

@@ -20,6 +20,7 @@ body {
   color: #444;
   // background: #f9f9fa;
   background-image:url('/assets/bg-grid.png');
+
   // margin-top: 50px;
   margin-bottom: 60px;
 }
@@ -63,7 +64,8 @@ h1 {
 @media print {
   body {
     // background-color: #FFF;
-    background-color: red;
+    background-color: #DFDFDF;
+    font-size: 20px;
   }
 
   #container {

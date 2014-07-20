@@ -1,3 +1,6 @@
+<style>
+  <%= Sass.compile(File.read(File.join(Rails.root, 'app', 'assets', 'stylesheets', "_styles.css"))) %>
+</style>
 
   <div id="activities_show">
     <div class="show_image">
@@ -45,5 +48,8 @@
     </li>
   </ul>
   <% end %>
-  <p id="pdf_link"><%= link_to "Download PDF", user_path(@user, :format => "pdf") %></p>
+
+  <%= link_to 'Create PDF document', user_path(@user, :format => :pdf), id: "pdf_link" %>
+
+ 
   </div>

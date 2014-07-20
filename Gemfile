@@ -3,6 +3,7 @@ ruby "2.1.2"
 
 gem 'pdfkit'
 gem 'wkhtmltopdf-binary'
+# gem 'prawn'
 
 
 # rspec & capybara
